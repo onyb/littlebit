@@ -1,4 +1,4 @@
-from ecc import Point
+from littlebit.ecc import Point
 
 
 def test_ne():

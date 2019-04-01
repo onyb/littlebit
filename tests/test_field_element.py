@@ -1,6 +1,6 @@
 import pytest
 
-from ecc import FieldElement
+from littlebit.ecc import FieldElement
 
 
 def test_number_range():
