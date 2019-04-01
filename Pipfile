@@ -9,6 +9,8 @@ ipython = "*"
 mypy = "*"
 pytest-cov = "*"
 codecov = "*"
+black = "==19.3b0"
+pdbpp = "*"
 
 [packages]
 attrs = "*"
