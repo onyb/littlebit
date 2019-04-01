@@ -74,7 +74,7 @@ class FieldElement:
             raise TypeError("Cannot divide two numbers in different Fields")
 
         # Use Fermat's Little Theorem:
-        #     (self.number ** self.prime - 1) % self.prime == 1
+        #     (n**p-1) % p == 1
         # means:
         #     1/n == n**p-2
 
