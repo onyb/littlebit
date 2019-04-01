@@ -8,8 +8,8 @@ class FieldElement:
 
     @number.validator
     def _check_number(self, attribute, value):
-        if not (0 < value < self.prime):
-            raise ValueError(f"'number' not in field range 0 to {self.prime - 1}.")
+        if not (0 <= value < self.prime):
+            raise ValueError(f"{value} not in field range 0 to {self.prime - 1}.")
 
     def __eq__(self, other: "FieldElement") -> bool:
         if other is None:
