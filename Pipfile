@@ -6,6 +6,9 @@ verify_ssl = true
 [dev-packages]
 pytest = "*"
 ipython = "*"
+mypy = "*"
+pytest-cov = "*"
+codecov = "*"
 
 [packages]
 attrs = "*"
