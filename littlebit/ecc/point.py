@@ -105,7 +105,7 @@ class Point:
         if self == other:
             x1, y1, a = self.x, self.y, self.a
 
-            s = (3 * x1 * x1 + a) / (2 * y1)
+            s = (3 * x1 ** 2 + a) / (2 * y1)
             x3 = s ** 2 - 2 * x1
             y3 = s * (x1 - x3) - y1
 
