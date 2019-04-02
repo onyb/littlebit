@@ -83,3 +83,11 @@ class FieldElement:
         return self.__class__(
             number=(self.number * other_inverse.number) % self.prime, prime=self.prime
         )
+
+    def __rmul__(self, coefficient):
+        """
+        Support operations like 3 * <FieldElement>
+        """
+        return type(self)(
+            number=(self.number * coefficient) % self.prime, prime=self.prime
+        )
