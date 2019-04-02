@@ -14,7 +14,7 @@ A simple Bitcoin library from scratch with focus on readability
     <tr>
       <th>Component</th>
       <th align="center">Status</th>
-      <th align="right">Concepts</th>
+      <th align="center">Concepts</th>
     </tr>
     <tr>
       <td><b>Elliptic Curve Cryptography (ECC)</b></td>
@@ -22,23 +22,42 @@ A simple Bitcoin library from scratch with focus on readability
       <td></td>
     </tr>
     <tr>
-      <td><a href="littlebit/ecc/field_element.py"><code>Finite Field operations</code></a></td>
+      <td><a href="littlebit/ecc/field_element.py"><code>Finite Fields</code></a></td>
       <td align="center">:green_apple:</td>
       <td>
         <ul>
           <li>
-            a
+            Finite Field definition
+          </li>
+          <li>
+            Finite Field operations
+            <ul>
+              <li>Addition
+              <li>Subtraction</li>
+              <li>Multiplication</li>
+              <li>Exponentation</li>
+              <li>Division</li>
+            </ul>
+          </li>
+          <li>
+            Fermat's Little Theorem
           </li>
         </ul>
       </td>
     </tr>
     <tr>
-      <td><a href="littlebit/ecc/point.py"><code>Point operations</code></a></td>
+      <td><a href="littlebit/ecc/point.py"><code>Elliptic Curve</code></a></td>
       <td align="center">:green_apple:</td>
       <td>
         <ul>
           <li>
-            a
+            Elliptic curve equation
+          </li>
+          <li>
+            Point addition over Finite Fields
+          </li>
+          <li>
+            Scalar Multiplication over Finite Fields
           </li>
         </ul>
       </td>
