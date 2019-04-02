@@ -110,3 +110,22 @@ class Point:
             y3 = s * (x1 - x3) - y1
 
             return type(self)(x=x3, y=y3, a=self.a, b=self.b)
+
+    def __rmul__(self, coefficient):
+        # Naive approach:
+        #     result = type(self)(x=None, y=None, a=self.a, b=self.b)
+        #     for _ in range(coefficient):
+        #         result += self
+        #     return result
+
+        # Optimized approach using binary expansion
+        # [TODO] - Add an explanation on how this works
+        coef = coefficient
+        current = self
+        result = type(self)(x=None, y=None, a=self.a, b=self.b)
+        while coef:
+            if coef & 1:
+                result += current
+            current += current
+            coef >>= 1
+        return result

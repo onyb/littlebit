@@ -53,37 +53,6 @@ def test_add():
         (21, 47, 71, None, None),
     ],
 )
-def test_scalar_mul_using_addition(scalar, x, y, expected_x, expected_y):
-    prime = 223
-    a = FieldElement(0, prime)
-    b = FieldElement(7, prime)
-
-    x1 = FieldElement(x, prime)
-    y1 = FieldElement(y, prime)
-
-    x2 = expected_x and FieldElement(expected_x, prime)
-    y2 = expected_y and FieldElement(expected_y, prime)
-
-    p = Point(x1, y1, a, b)
-
-    res = Point(x=None, y=None, a=a, b=b)
-    for _ in range(scalar):
-        res = res + p
-
-    assert res == Point(x2, y2, a, b)
-
-
-@pytest.mark.parametrize(
-    "scalar, x, y, expected_x, expected_y",
-    [
-        (2, 192, 105, 49, 71),
-        (2, 143, 98, 64, 168),
-        (2, 47, 71, 36, 111),
-        (4, 47, 71, 194, 51),
-        (8, 47, 71, 116, 55),
-        (21, 47, 71, None, None),
-    ],
-)
 def test_rmul(scalar, x, y, expected_x, expected_y):
     prime = 223
     a = FieldElement(0, prime)
