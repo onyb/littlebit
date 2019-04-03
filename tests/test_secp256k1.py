@@ -1,4 +1,6 @@
-from littlebit.ecc.secp256k1 import S256Point, N, G, Signature
+from random import randint
+
+from littlebit.ecc.secp256k1 import S256Point, N, G, Signature, PrivateKey
 
 
 def test_order():
@@ -53,3 +55,10 @@ def test_verify():
     r = 0xEFF69EF2B1BD93A66ED5219ADD4FB51E11A840F404876325A1E8FFE0529A2C
     s = 0xC7207FEE197D27C618AEA621406F6BF5EF6FCA38681D82B2F06FDDBDCE6FEAB6
     assert point.verify(z, Signature(r, s))
+
+
+def test_sign():
+    pk = PrivateKey(randint(0, N))
+    z = randint(0, 2 ** 256)
+    sig = pk.sign(z)
+    assert pk.point.verify(z, sig)
