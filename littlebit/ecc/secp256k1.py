@@ -1,6 +1,5 @@
 import hashlib
 import hmac
-
 from dataclasses import dataclass, field
 
 from .field_element import FieldElement

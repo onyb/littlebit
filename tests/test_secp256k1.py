@@ -1,6 +1,6 @@
 from random import randint
 
-from littlebit.ecc.secp256k1 import S256Point, N, G, Signature, PrivateKey
+from littlebit.ecc.secp256k1 import G, N, PrivateKey, S256Point, Signature
 
 
 def test_order():
