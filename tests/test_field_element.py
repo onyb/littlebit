@@ -69,6 +69,13 @@ def test_pow():
     b = FieldElement(18, 31)
     assert a ** 5 * b == FieldElement(16, 31)
 
+    a = FieldElement(17, 31)
+    assert a ** -3 == FieldElement(29, 31)
+
+    a = FieldElement(4, 31)
+    b = FieldElement(11, 31)
+    assert a ** -4 * b == FieldElement(13, 31)
+
 
 def test_div():
     with pytest.raises(TypeError):
@@ -79,10 +86,3 @@ def test_div():
     a = FieldElement(3, 31)
     b = FieldElement(24, 31)
     assert a / b == FieldElement(4, 31)
-
-    a = FieldElement(17, 31)
-    assert a ** -3 == FieldElement(29, 31)
-
-    a = FieldElement(4, 31)
-    b = FieldElement(11, 31)
-    assert a ** -4 * b == FieldElement(13, 31)
