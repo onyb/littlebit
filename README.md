@@ -94,7 +94,7 @@ A simple Bitcoin library from scratch with focus on readability
     </tr>
     <tr>
       <td>SEC Format</td>
-      <td align="center">:tomato:</td>
+      <td align="center">:lemon:</td>
       <td>
       </td>
     </tr>
