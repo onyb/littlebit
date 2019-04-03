@@ -105,13 +105,19 @@ A simple Bitcoin library from scratch with focus on readability
       </td>
     </tr>
     <tr>
-      <td>Base58</td>
+      <td>Base58 encoding</td>
       <td align="center">:tomato:</td>
       <td>
       </td>
     </tr>
     <tr>
-      <td>Big and Little Endian</td>
+      <td>Address Format</td>
+      <td align="center">:tomato:</td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td>WIF Format</td>
       <td align="center">:tomato:</td>
       <td>
       </td>
