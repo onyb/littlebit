@@ -1,7 +1,7 @@
 import hashlib
 import hmac
 
-import attr
+from dataclasses import dataclass, field
 
 from .field_element import FieldElement
 from .point import Point
@@ -56,23 +56,22 @@ G = S256Point(
 N = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141
 
 
-@attr.s
+@dataclass
 class Signature:
-    r = attr.ib()
-    s = attr.ib()
+    r: int
+    s: int
 
     def __repr__(self):
         return f"Signature(r={self.r:x}, s={self.s:x})"
 
 
-@attr.s
+@dataclass
 class PrivateKey:
-    secret = attr.ib()
-    point = attr.ib(init=False)  # public key
+    secret: int
+    point: int = field(init=False)  # public key
 
-    @point.default
-    def init_point(self):
-        return self.secret * G
+    def __post_init__(self):
+        self.point = self.secret * G
 
     def hex(self):
         return f"{self.secret:x}".zfill(64)

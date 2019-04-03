@@ -1,23 +1,19 @@
-import attr
+from dataclasses import dataclass
 
 
-@attr.s
+@dataclass
 class FieldElement:
-    number = attr.ib()
-    prime = attr.ib()
+    number: int
+    prime: int
 
-    @number.validator
-    def _check_number(self, attribute, value):
-        if not (0 <= value < self.prime):
-            raise ValueError(f"{value} not in field range 0 to {self.prime - 1}.")
+    def __post_init__(self):
+        if not (0 <= self.number < self.prime):
+            raise ValueError(f"{self.number} not in field range 0 to {self.prime - 1}.")
 
     def __eq__(self, other: "FieldElement") -> bool:
         if other is None:
             return False
-        return self.num == other.num and self.prime == other.prime
-
-    def __ne__(self, other: "FieldElement") -> bool:
-        return not (self == other)
+        return self.number == other.number and self.prime == other.prime
 
     def __add__(self, other: "FieldElement") -> "FieldElement":
         if self.prime != other.prime:

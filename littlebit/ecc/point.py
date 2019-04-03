@@ -1,18 +1,18 @@
-import attr
+from dataclasses import dataclass
 
 
-@attr.s
+@dataclass
 class Point:
-    x = attr.ib()
-    y = attr.ib()
-    a = attr.ib()
-    b = attr.ib()
+    x: int
+    y: int
+    a: int
+    b: int
 
     @property
     def is_identity(self):
         return self.x is None and self.y is None
 
-    def __attrs_post_init__(self):
+    def __post_init__(self):
         # Skip curve validation is point is at infinity, denoted by x=None and y=None.
         if self.is_identity:
             return
@@ -35,9 +35,6 @@ class Point:
             and self.a == other.a
             and self.b == other.b
         )
-
-    def __ne__(self, other):
-        return not (self == other)
 
     def __add__(self, other):
         if self.a != other.a or self.b != other.b:
