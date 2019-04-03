@@ -8,6 +8,11 @@ def test_number_range():
         FieldElement(number=7, prime=3)
 
 
+def test_equals_type_error():
+    with pytest.raises(NotImplementedError):
+        FieldElement(number=2, prime=31) == 0
+
+
 def test_ne():
     a = FieldElement(2, 31)
     b = FieldElement(2, 31)

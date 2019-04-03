@@ -10,7 +10,10 @@ class FieldElement:
         if not (0 <= self.number < self.prime):
             raise ValueError(f"{self.number} not in field range 0 to {self.prime - 1}.")
 
-    def __eq__(self, other: "FieldElement") -> bool:
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, FieldElement):
+            raise NotImplementedError
+
         return self.number == other.number and self.prime == other.prime
 
     def __add__(self, other: "FieldElement") -> "FieldElement":
