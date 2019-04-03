@@ -21,13 +21,6 @@ class Point:
         if self.y ** 2 != self.x ** 3 + self.a * self.x + self.b:
             raise ValueError(f"({self.x}, {self.y}) is not on the elliptic curve")
 
-    def __repr__(self):
-        # Special represenation for the Identity point
-        if self.is_identity:
-            return "I"
-
-        return super().__repr__()
-
     def __eq__(self, other):
         return (
             self.x == other.x
