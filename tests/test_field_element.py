@@ -71,6 +71,11 @@ def test_pow():
 
 
 def test_div():
+    with pytest.raises(TypeError):
+        a = FieldElement(number=2, prime=31)
+        b = FieldElement(number=2, prime=32)
+        a / b
+
     a = FieldElement(3, 31)
     b = FieldElement(24, 31)
     assert a / b == FieldElement(4, 31)
