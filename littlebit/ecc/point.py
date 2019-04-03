@@ -88,7 +88,7 @@ class Point:
         #     S = ∞                                                                   #
         #     (X₃, Y₃) = I                                                            #
         ###############################################################################
-        if self == other and self.y == 0:
+        if self == other and self.y == 0 * self.x:  # 0 * self.x = I
             return type(self)(x=None, y=None, a=self.a, b=self.b)
 
         ###############################################################################
