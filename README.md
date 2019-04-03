@@ -59,19 +59,32 @@ A simple Bitcoin library from scratch with focus on readability
           <li>
             Scalar Multiplication over Finite Fields
           </li>
+          <li>
+            Finite cyclic groups
+          </li>
         </ul>
       </td>
     </tr>
     <tr>
-      <td>secp256k1</td>
-      <td align="center">:lemon:</td>
+      <td><a href="littlebit/ecc/secp256k1.py"><code>secp256k1</code></a></td>
+      <td align="center">:green_apple:</td>
       <td>
+        <ul>
+          <li>secp256k1 equation, and parameters</li>
+          <li>Point and FieldElement definitions for secp256k1</li>
+        </ul>
       </td>
     </tr>
     <tr>
-      <td>Signatures</td>
-      <td align="center">:tomato:</td>
+      <td><a href="littlebit/ecc/secp256k1.py"><code>Signatures</code></a></td>
+      <td align="center">:green_apple:</td>
       <td>
+        <ul>
+          <li>ECDSA algorithm</li>
+          <li>Message signing</li>
+          <li>Signature verification</li>
+          <li>Security of ECDSA signatures</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -98,7 +111,7 @@ A simple Bitcoin library from scratch with focus on readability
       </td>
     </tr>
     <tr>
-      <td>Big and Little Endian Redux</td>
+      <td>Big and Little Endian</td>
       <td align="center">:tomato:</td>
       <td>
       </td>
