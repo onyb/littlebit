@@ -8,12 +8,10 @@ def test_number_range():
         FieldElement(number=7, prime=3)
 
 
-def test_equals_type_error():
+def test_ne():
     with pytest.raises(NotImplementedError):
         FieldElement(number=2, prime=31) == 0
 
-
-def test_ne():
     a = FieldElement(2, 31)
     b = FieldElement(2, 31)
     c = FieldElement(15, 31)
@@ -23,6 +21,11 @@ def test_ne():
 
 
 def test_add():
+    with pytest.raises(TypeError):
+        a = FieldElement(number=2, prime=31)
+        b = FieldElement(number=2, prime=32)
+        a + b
+
     a = FieldElement(2, 31)
     b = FieldElement(15, 31)
     assert a + b == FieldElement(17, 31)
@@ -33,6 +36,11 @@ def test_add():
 
 
 def test_sub():
+    with pytest.raises(TypeError):
+        a = FieldElement(number=2, prime=31)
+        b = FieldElement(number=2, prime=32)
+        a - b
+
     a = FieldElement(29, 31)
     b = FieldElement(4, 31)
     assert a - b == FieldElement(25, 31)
@@ -43,6 +51,11 @@ def test_sub():
 
 
 def test_mul():
+    with pytest.raises(TypeError):
+        a = FieldElement(number=2, prime=31)
+        b = FieldElement(number=2, prime=32)
+        a * b
+
     a = FieldElement(24, 31)
     b = FieldElement(19, 31)
     assert a * b == FieldElement(22, 31)
