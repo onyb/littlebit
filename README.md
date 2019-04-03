@@ -1,11 +1,15 @@
 # littlebit
-A simple Bitcoin library from scratch with focus on readability
 
 [![Build Status](https://travis-ci.org/onyb/littlebit.svg?branch=master)](https://travis-ci.org/onyb/littlebit)
 [![codecov](https://codecov.io/gh/onyb/littlebit/branch/master/graph/badge.svg)](https://codecov.io/gh/onyb/littlebit)
 
 
-### Progress report
+LittleBit is a product of my educational pursuit of learning how [Bitcoin](https://bitcoin.org/bitcoin.pdf) _really_ works at a very fundamental level. The objective of this exercise is to implement Bitcoin primitives with a **clean**, **readable**, and **heavily-commented** code, using nothing but the **Python standard library**.
+
+**This software comes sans warranty. Do NOT use this code for anything other than educational purposes.**
+
+
+### Progress report of features / concepts
 
 > Legend: :green_apple: Done &nbsp; :lemon: In Progress &nbsp; :tomato: TODO
 
