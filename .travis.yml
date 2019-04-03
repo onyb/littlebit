@@ -11,4 +11,4 @@ script:
 
 after_success:
   - codecov
-  - mypy littlebit || true
+  - mypy littlebit
