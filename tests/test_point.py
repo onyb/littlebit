@@ -1,3 +1,5 @@
+import pytest
+
 from littlebit.ecc import Point
 
 
@@ -6,6 +8,13 @@ def test_ne():
     b = Point(x=18, y=77, a=5, b=7)
     assert a != b
     assert not (a != a)
+
+
+def test_add_different_curves():
+    with pytest.raises(TypeError):
+        a = Point(x=2, y=5, a=5, b=7)
+        b = Point(x=3, y=0, a=-9, b=0)
+        a + b
 
 
 def test_add__additive_inverse():
