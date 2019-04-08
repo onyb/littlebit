@@ -72,7 +72,8 @@ class PrivateKey:
     def __post_init__(self):
         self.point = self.secret * G
 
-    def hex(self):
+    @property
+    def hex(self) -> str:
         return f"{self.secret:x}".zfill(64)
 
     def sign(self, z: int) -> Signature:
