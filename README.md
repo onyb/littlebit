@@ -26,7 +26,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td></td>
     </tr>
     <tr>
-      <td><a href="littlebit/ecc/field_element.py"><code>Finite Fields</code></a></td>
+      <td><a href="littlebit/ecc/field.py"><code>Finite Fields</code></a></td>
       <td align="center">:green_apple:</td>
       <td>
         <ul>

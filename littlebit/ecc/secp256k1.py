@@ -2,7 +2,7 @@ import hashlib
 import hmac
 from dataclasses import dataclass, field
 
-from .field_element import FieldElement
+from .field import FieldElement
 from .point import Point
 
 # secp256k1 elliptic curve equation: y² = x³ + 7

@@ -1,2 +1,2 @@
-from .field_element import FieldElement
+from .field import FieldElement
 from .point import Point
