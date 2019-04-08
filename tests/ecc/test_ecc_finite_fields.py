@@ -42,28 +42,28 @@ def test_add():
         assert p1 + p2 == p3
 
 
-@pytest.mark.parametrize(
-    "scalar, x, y, expected_x, expected_y",
-    [
+def test_rmul():
+    prime = 223
+    a = FieldElement(0, prime)
+    b = FieldElement(7, prime)
+
+    multiplications = (
+        # scalar, x1, y1, x2, y2
         (2, 192, 105, 49, 71),
         (2, 143, 98, 64, 168),
         (2, 47, 71, 36, 111),
         (4, 47, 71, 194, 51),
         (8, 47, 71, 116, 55),
         (21, 47, 71, None, None),
-    ],
-)
-def test_rmul(scalar, x, y, expected_x, expected_y):
-    prime = 223
-    a = FieldElement(0, prime)
-    b = FieldElement(7, prime)
+    )
 
-    x1 = FieldElement(x, prime)
-    y1 = FieldElement(y, prime)
+    for scalar, x1, y1, x2, y2 in multiplications:
+        x1_el = FieldElement(x1, prime)
+        y1_el = FieldElement(y1, prime)
 
-    x2 = expected_x and FieldElement(expected_x, prime)
-    y2 = expected_y and FieldElement(expected_y, prime)
+        x2_el = x2 and FieldElement(x2, prime)
+        y2_el = y2 and FieldElement(y2, prime)
 
-    p = Point(x1, y1, a, b)
+        p = Point(x1_el, y1_el, a, b)
 
-    assert scalar * p == Point(x2, y2, a, b)
+        assert scalar * p == Point(x2_el, y2_el, a, b)
