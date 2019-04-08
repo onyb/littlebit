@@ -42,11 +42,11 @@ class FieldElement:
 
     def __pow__(self, exponent: int) -> "FieldElement":
         # Dealing with negative exponents:
-        # Ex: a**-3
-        #           == a**-3 * a**p-1   .. [using FLT]
-        #           == a**p-4
-        #           == a**p-4 * a**p-1  .. [using FLT]
-        #           == a**2p-5
+        # Ex: a⁻³
+        #         = a⁻³ x aᵖ⁻¹   .. [using Fermat's Little Theorem]
+        #         = aᵖ⁻⁴
+        #         = aᵖ⁻⁴ x aᵖ⁻¹  .. [using Fermat's Little Theorem]
+        #         = a²ᵖ⁻⁵
         #
         # We're adding p-1 to the exp in a**exp, at each round. We repeat this
         # until exp is positive. Code snippet below:
@@ -71,9 +71,9 @@ class FieldElement:
             raise TypeError("Cannot divide two numbers in different Fields")
 
         # Use Fermat's Little Theorem:
-        #     (n**p-1) % p == 1
+        #     (nᵖ⁻¹) % p == 1
         # means:
-        #     1/n == n**p-2
+        #     1/n == nᵖ⁻²
 
         other_inverse = other ** (self.prime - 2)
 
