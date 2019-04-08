@@ -8,11 +8,11 @@ from .point import Point
 # secp256k1 elliptic curve equation: y² = x³ + 7
 
 # Elliptic curve parameters A and B of the curve : y² = x³ Ax + B
-A = 0
-B = 7
+A: int = 0
+B: int = 7
 
 # Prime of the finite field
-P = 2 ** 256 - 2 ** 32 - 977
+P: int = 2 ** 256 - 2 ** 32 - 977
 
 
 class S256FieldElement(FieldElement):
@@ -21,6 +21,15 @@ class S256FieldElement(FieldElement):
 
     def __repr__(self):
         return f"{self.number:x}".zfill(64)
+
+
+@dataclass
+class Signature:
+    r: int
+    s: int
+
+    def __repr__(self):
+        return f"Signature(r={self.r:x}, s={self.s:x})"
 
 
 class S256Point(Point):
@@ -36,7 +45,7 @@ class S256Point(Point):
     def __rmul__(self, coefficient):
         return super().__rmul__(coefficient % N)
 
-    def verify(self, z, signature):
+    def verify(self, z: int, signature: Signature) -> bool:
         s_inv = pow(signature.s, N - 2, N)
         u = (z * s_inv) % N
         v = (signature.r * s_inv) % N
@@ -56,15 +65,6 @@ N = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141
 
 
 @dataclass
-class Signature:
-    r: int
-    s: int
-
-    def __repr__(self):
-        return f"Signature(r={self.r:x}, s={self.s:x})"
-
-
-@dataclass
 class PrivateKey:
     secret: int
     point: int = field(init=False)  # public key
@@ -75,7 +75,7 @@ class PrivateKey:
     def hex(self):
         return f"{self.secret:x}".zfill(64)
 
-    def sign(self, z):
+    def sign(self, z: int) -> Signature:
         k = self.deterministic_k(z)  # or, randint(0, N)
         R = k * G
         r = R.x.number
@@ -85,7 +85,7 @@ class PrivateKey:
             s = N - s
         return Signature(r, s)
 
-    def deterministic_k(self, z):
+    def deterministic_k(self, z: int) -> int:
         k = b"\x00" * 32
         v = b"\x01" * 32
         if z > N:
@@ -101,6 +101,6 @@ class PrivateKey:
             v = hmac.new(k, v, s256).digest()
             candidate = int.from_bytes(v, "big")
             if candidate >= 1 and candidate < N:
-                return candidate  # <2>
+                return candidate
             k = hmac.new(k, v + b"\x00", s256).digest()
             v = hmac.new(k, v, s256).digest()
