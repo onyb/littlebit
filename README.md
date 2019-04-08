@@ -34,6 +34,9 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
             Finite Field definition
           </li>
           <li>
+            <a href="https://brilliant.org/wiki/fermats-little-theorem/">Fermat's Little Theorem</a>
+          </li>
+          <li>
             Finite Field operations
             <ul>
               <li>Addition
@@ -42,9 +45,6 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
               <li>Exponentation</li>
               <li>Division</li>
             </ul>
-          </li>
-          <li>
-            Fermat's Little Theorem
           </li>
         </ul>
       </td>
@@ -74,7 +74,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td align="center">:green_apple:</td>
       <td>
         <ul>
-          <li>secp256k1 equation, and parameters</li>
+          <li><a href="https://en.bitcoin.it/wiki/Secp256k1">secp256k1 equation, and parameters</a></li>
           <li>Point and FieldElement definitions for secp256k1</li>
         </ul>
       </td>
@@ -84,7 +84,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td align="center">:green_apple:</td>
       <td>
         <ul>
-          <li>ECDSA algorithm</li>
+          <li><a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA algorithm</a></li>
           <li>Message signing</li>
           <li>Signature verification</li>
           <li>Security of ECDSA signatures</li>

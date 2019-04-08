@@ -87,6 +87,13 @@ class PrivateKey:
         return Signature(r, s)
 
     def deterministic_k(self, z: int) -> int:
+        """
+        Directly based on RFC 6979:
+            Deterministic Usage of the Digital Signature Algorithm (DSA) and
+            Elliptic Curve Digital Signature Algorithm (ECDSA)
+
+        [TODO] - Explain me
+        """
         k = b"\x00" * 32
         v = b"\x01" * 32
         if z > N:

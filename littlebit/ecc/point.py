@@ -109,7 +109,7 @@ class Point:
         #     return result
 
         # Optimized approach using binary expansion
-        # [TODO] - Add an explanation on how this works
+        # [TODO] - Explain me
         coef = coefficient
         current = self
         result = type(self)(x=None, y=None, a=self.a, b=self.b)

@@ -55,7 +55,7 @@ class FieldElement:
         #         n += p-1
         #
         # The above is equivalent to doing exp % p-1, which also ensures that the
-        # result is positive. [TODO] - Why?
+        # result is positive. [TODO] - Explain me
 
         return self.__class__(
             number=pow(
