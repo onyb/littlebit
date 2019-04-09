@@ -46,7 +46,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
               <li><a href="littlebit/ecc/field.py#L35-L41"><code>Multiplication</code></li>
               <li><a href="littlebit/ecc/field.py#L43-L67"><code>Exponentation</code></li>
               <li><a href="littlebit/ecc/field.py#L69-L82"><code>Division</code></li>
-              <li><a href="littlebit/ecc/field.py#L84-L90"><code>Scalar multiplication</code></li>
+              <li><a href="littlebit/ecc/field.py#L84-L90"><code>Scalar Multiplication</code></li>
             </ul>
           </li>
         </ul>
@@ -61,10 +61,10 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
             Elliptic curve equation
           </li>
           <li>
-            Point addition over Finite Fields
+            <a href="littlebit/ecc/point.py#L34-L104"><code>Point Addition over Finite Fields</code></a>
           </li>
           <li>
-            Scalar Multiplication over Finite Fields
+            <a href="littlebit/ecc/point.py#L106-L123"><code>Scalar Multiplication over Finite Fields</code></a>
           </li>
           <li>
             Finite cyclic groups
@@ -104,7 +104,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td align="center">:green_apple:</td>
       <td>
         <ul>
-          <li><a href="littlebit/ecc/secp256k1.py#L78-L103"><code>Uncompressed and compressed formats</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1.py#L78-L103"><code>Uncompressed and Compressed formats</code></a></li>
           <li><a href="littlebit/ecc/secp256k1.py#L26-L45"><code>Square root of a S256FieldElement</code></a></li>
           <li><a href="littlebit/ecc/secp256k1.py#L105-L134"><code>Deserialization</code></a></li>
         </ul>
