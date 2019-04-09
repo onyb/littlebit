@@ -83,7 +83,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       </td>
     </tr>
     <tr>
-      <td><a href="littlebit/ecc/secp256k1.py"><code>Signatures</code></a></td>
+      <td><a href="littlebit/ecc/secp256k1.py#L49"><code>Signatures</code></a></td>
       <td align="center">:green_apple:</td>
       <td>
         <ul>
