@@ -1,4 +1,4 @@
-# littlebit
+# LittleBit
 
 [![Build Status](https://travis-ci.org/onyb/littlebit.svg?branch=master)](https://travis-ci.org/onyb/littlebit)
 [![codecov](https://codecov.io/gh/onyb/littlebit/branch/master/graph/badge.svg)](https://codecov.io/gh/onyb/littlebit)
@@ -7,14 +7,14 @@
 
 LittleBit is a product of my educational pursuit of learning how [Bitcoin](https://bitcoin.org/bitcoin.pdf) _really_ works at a very fundamental level. The objective of this exercise is to implement Bitcoin primitives with a **clean**, **readable**, and **heavily-commented** code, using nothing but the **Python standard library**.
 
-**This software comes sans warranty. Do NOT use this code for anything other than educational purposes.**
+**This software comes sans warranty. Do NOT use this code for anything other than educational purposes. I beg you.**
 
 
 ### Progress report of features / concepts
 
 > Legend: :green_apple: Done &nbsp; :lemon: In Progress &nbsp; :tomato: TODO
 
-> Links to code in the repository are indicated [`like this`](). External links look [like this]().
+> Internal links to code inside the repository are indicated <a href="https://github.com/onyb/littlebit">`like this`</a>. External links look <a href="https://github.com/onyb/littlebit">like this</a>.
 
 <table>
   <tbody>
@@ -137,12 +137,13 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
   </tbody>
 </table>
 
+<sub><b>Note:</b> This table is not complete.</sub>
 
 
 ### Contributing
 
 You can contribute to the project by:
-- Reading the codebase, and asking questions (by [creating issues](https://github.com/onyb/littlebit/issues/new)).
-- Improving test coverage.
-- Adding type annotations.
-- Adding code comments and explanations of theoretical concepts.
+- 🔬 Reading the codebase, and asking questions (please [create issues](https://github.com/onyb/littlebit/issues/new)).
+- 💯 Improving coverage of unit tests.
+- <b>λ</b> &nbsp; Adding (clever) type annotations.
+- 💬 Adding code comments and explanations.
