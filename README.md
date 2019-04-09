@@ -13,6 +13,8 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
 
 > Legend: :green_apple: Done &nbsp; :lemon: In Progress &nbsp; :tomato: TODO
 
+> Links to code in the repository are indicated [`like this`](). External links look [like this]().
+
 <table>
   <tbody>
     <tr>
@@ -39,11 +41,12 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
           <li>
             Finite Field operations
             <ul>
-              <li>Addition
-              <li>Subtraction</li>
-              <li>Multiplication</li>
-              <li>Exponentation</li>
-              <li>Division</li>
+              <li><a href="littlebit/ecc/field.py#L19-L25"><code>Addition</code></li>
+              <li><a href="littlebit/ecc/field.py#L27-L33"><code>Subtraction</code></li>
+              <li><a href="littlebit/ecc/field.py#L35-L41"><code>Multiplication</code></li>
+              <li><a href="littlebit/ecc/field.py#L43-L67"><code>Exponentation</code></li>
+              <li><a href="littlebit/ecc/field.py#L69-L82"><code>Division</code></li>
+              <li><a href="littlebit/ecc/field.py#L84-L90"><code>Scalar Multiplication</code></li>
             </ul>
           </li>
         </ul>
@@ -55,13 +58,13 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td>
         <ul>
           <li>
-            Elliptic curve equation
+            <a href="littlebit/ecc/point.py#L22"><code>Elliptic curve equation</code></a>
           </li>
           <li>
-            Point addition over Finite Fields
+            <a href="littlebit/ecc/point.py#L34-L104"><code>Point Addition over Finite Fields</code></a>
           </li>
           <li>
-            Scalar Multiplication over Finite Fields
+            <a href="littlebit/ecc/point.py#L106-L123"><code>Scalar Multiplication over Finite Fields</code></a>
           </li>
           <li>
             Finite cyclic groups
@@ -75,19 +78,18 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td>
         <ul>
           <li><a href="https://en.bitcoin.it/wiki/Secp256k1">secp256k1 equation, and parameters</a></li>
-          <li>Point and FieldElement definitions for secp256k1</li>
+          <li><a href="littlebit/ecc/secp256k1.py#L19"><code>Point</code></a> and <a href="littlebit/ecc/secp256k1.py#L57"><code>FieldElement</code></a> definitions for secp256k1</li>
         </ul>
       </td>
     </tr>
     <tr>
-      <td><a href="littlebit/ecc/secp256k1.py"><code>Signatures</code></a></td>
+      <td>Signatures</td>
       <td align="center">:green_apple:</td>
       <td>
         <ul>
           <li><a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA algorithm</a></li>
-          <li>Message signing</li>
-          <li>Signature verification</li>
-          <li>Security of ECDSA signatures</li>
+          <li><a href="littlebit/ecc/secp256k1.py#L159-L167"><code>Message signing</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1.py#L70-L76"><code>Signature verification</code></a></li>
         </ul>
       </td>
     </tr>
@@ -97,14 +99,19 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td></td>
     </tr>
     <tr>
-      <td>SEC Format</td>
-      <td align="center">:lemon:</td>
+      <td>Standards for Efficient Cryptography (SEC) Format</td>
+      <td align="center">:green_apple:</td>
       <td>
+        <ul>
+          <li><a href="littlebit/ecc/secp256k1.py#L78-L103"><code>Uncompressed and Compressed formats</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1.py#L26-L45"><code>Square root of a S256FieldElement</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1.py#L105-L134"><code>Deserialization</code></a></li>
+        </ul>
       </td>
     </tr>
     <tr>
-      <td>DER Signatures</td>
-      <td align="center">:tomato:</td>
+      <td>Distinguished Encoding Rules (DER) Signature format</td>
+      <td align="center">:lemon:</td>
       <td>
       </td>
     </tr>
@@ -121,10 +128,20 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       </td>
     </tr>
     <tr>
-      <td>WIF Format</td>
+      <td>Wallet Import Format (WIF)</td>
       <td align="center">:tomato:</td>
       <td>
       </td>
     </tr>
   </tbody>
 </table>
+
+
+
+### Contributing
+
+You can contribute to the project by:
+- Reading the codebase, and asking questions (by [creating issues](https://github.com/onyb/littlebit/issues/new)).
+- Improving test coverage.
+- Adding type annotations.
+- Adding code comments and explanations of theoretical concepts.
