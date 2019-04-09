@@ -13,6 +13,8 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
 
 > Legend: :green_apple: Done &nbsp; :lemon: In Progress &nbsp; :tomato: TODO
 
+> Links to code in the repository are indicated [`like this`](). External links look [like this]().
+
 <table>
   <tbody>
     <tr>
@@ -97,14 +99,19 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td></td>
     </tr>
     <tr>
-      <td>SEC Format</td>
-      <td align="center">:lemon:</td>
+      <td>Standards for Efficient Cryptography (SEC) Format</td>
+      <td align="center">:green_apple:</td>
       <td>
+        <ul>
+          <li><a href="littlebit/ecc/secp256k1.py#L78-L103"><code>Uncompressed and compressed formats</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1.py#L26-L45"><code>Square root of a S256FieldElement</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1.py#L105-L134"><code>Deserialization</code></a></li>
+        </ul>
       </td>
     </tr>
     <tr>
-      <td>DER Signatures</td>
-      <td align="center">:tomato:</td>
+      <td>Distinguished Encoding Rules (DER) Signature format</td>
+      <td align="center">:lemon:</td>
       <td>
       </td>
     </tr>
@@ -121,7 +128,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       </td>
     </tr>
     <tr>
-      <td>WIF Format</td>
+      <td>Wallet Import Format (WIF)</td>
       <td align="center">:tomato:</td>
       <td>
       </td>
