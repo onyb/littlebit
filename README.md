@@ -41,11 +41,12 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
           <li>
             Finite Field operations
             <ul>
-              <li>Addition
-              <li>Subtraction</li>
-              <li>Multiplication</li>
-              <li>Exponentation</li>
-              <li>Division</li>
+              <li><a href="littlebit/ecc/field.py#L19-L25"><code>Addition</code></li>
+              <li><a href="littlebit/ecc/field.py#L27-L33"><code>Subtraction</code></li>
+              <li><a href="littlebit/ecc/field.py#L35-L41"><code>Multiplication</code></li>
+              <li><a href="littlebit/ecc/field.py#L43-L67"><code>Exponentation</code></li>
+              <li><a href="littlebit/ecc/field.py#L69-L82"><code>Division</code></li>
+              <li><a href="littlebit/ecc/field.py#L84-L90"><code>Scalar multiplication</code></li>
             </ul>
           </li>
         </ul>
