@@ -1,6 +1,7 @@
 import hashlib
 import hmac
 from dataclasses import dataclass, field
+from typing import cast
 
 from .field import FieldElement
 from .point import Point
@@ -100,6 +101,37 @@ class S256Point(Point):
                 + self.x.number.to_bytes(32, "big")
                 + self.y.number.to_bytes(32, "big")
             )
+
+    @classmethod
+    def parse(cls, sec_bin: bytes) -> "S256Point":
+        # Handle the case of uncompressed SEC format
+        if sec_bin[0] == 4:  # check if prefix byte is b'\x04'
+            return cls(
+                x=int.from_bytes(sec_bin[1:33], "big"),
+                y=int.from_bytes(sec_bin[33:65], "big"),
+            )
+
+        is_y_expected_to_be_even = sec_bin[0] == 2  # prefix byte is b'\x02'
+        x = S256FieldElement(number=int.from_bytes(sec_bin[1:], "big"))
+
+        # Right side of the equation: y² = x³ + 7
+        alpha = x ** 3 + S256FieldElement(number=B)
+
+        # [FIXME] - Dirty hack to indicate mypy about the true type
+        alpha = cast(S256FieldElement, alpha)
+
+        y = alpha.sqrt()
+
+        if is_y_expected_to_be_even:
+            if y.number % 2 == 0:
+                return cls(x=x, y=y)
+            else:
+                return cls(x=x, y=S256FieldElement(P - y.number))
+        else:
+            if y.number % 2 == 0:
+                return cls(x=x, y=S256FieldElement(P - y.number))
+            else:
+                return cls(x=x, y=y)
 
 
 # Generator point
