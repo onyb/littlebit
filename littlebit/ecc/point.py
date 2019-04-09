@@ -1,12 +1,14 @@
 from dataclasses import dataclass
 
+from .field import FieldElement
+
 
 @dataclass
 class Point:
-    x: int
-    y: int
-    a: int
-    b: int
+    x: FieldElement
+    y: FieldElement
+    a: FieldElement
+    b: FieldElement
 
     @property
     def is_identity(self):
