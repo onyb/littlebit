@@ -135,3 +135,13 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
     </tr>
   </tbody>
 </table>
+
+
+
+### Contributing
+
+You can contribute to the project by:
+- Reading the codebase, and asking questions (by [creating issues](https://github.com/onyb/littlebit/issues/new)).
+- Improving test coverage.
+- Adding type annotations.
+- Adding code comments and explanations of theoretical concepts.
