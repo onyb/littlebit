@@ -53,7 +53,7 @@ class S256Point(Point):
         total = u * G + v * self
         return total.x.number == signature.r
 
-    def sec(self):
+    def sec(self, compressed: bool = True) -> bytes:
         """
         Returns binary version of the Standards for Efficient Cryptography (SEC)
         format.
@@ -62,13 +62,23 @@ class S256Point(Point):
             1. Start with the prefix byte, 0x04
             2. Append the x coordinate in 32 bytes as a big-endian integer
             3. Append the y coordinate in 32 bytes as a big-endian integer
-        """
 
-        return (
-            b"\x04"
-            + self.x.number.to_bytes(32, "big")
-            + self.y.number.to_bytes(32, "big")
-        )
+        Compressed SEC format:
+            1. Start with the prefix byte.
+               If y is even, it's 0x02; otherwise, it's 0x03
+            2. Append the x coordinate in 32 bytes as a big-endian integer
+        """
+        if compressed:
+            if self.y.number % 2 == 0:
+                return b"\x02" + self.x.number.to_bytes(32, "big")
+            else:
+                return b"\x03" + self.x.number.to_bytes(32, "big")
+        else:
+            return (
+                b"\x04"
+                + self.x.number.to_bytes(32, "big")
+                + self.y.number.to_bytes(32, "big")
+            )
 
 
 # Generator point
