@@ -90,7 +90,6 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
           <li><a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA algorithm</a></li>
           <li><a href="littlebit/ecc/secp256k1.py#L159-L167"><code>Message signing</code></a></li>
           <li><a href="littlebit/ecc/secp256k1.py#L70-L76"><code>Signature verification</code></a></li>
-          <li>Security of ECDSA signatures</li>
         </ul>
       </td>
     </tr>
