@@ -58,7 +58,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td>
         <ul>
           <li>
-            Elliptic curve equation
+            <a href="littlebit/ecc/point.py#L22"><code>Elliptic curve equation</code></a>
           </li>
           <li>
             <a href="littlebit/ecc/point.py#L34-L104"><code>Point Addition over Finite Fields</code></a>
@@ -78,7 +78,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td>
         <ul>
           <li><a href="https://en.bitcoin.it/wiki/Secp256k1">secp256k1 equation, and parameters</a></li>
-          <li>Point and FieldElement definitions for secp256k1</li>
+          <li><a href="littlebit/ecc/secp256k1.py#L19"><code>Point</code></a> and <a href="littlebit/ecc/secp256k1.py#L57"><code>FieldElement</code></a> definitions for secp256k1</li>
         </ul>
       </td>
     </tr>
@@ -88,8 +88,8 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td>
         <ul>
           <li><a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA algorithm</a></li>
-          <li>Message signing</li>
-          <li>Signature verification</li>
+          <li><a href="littlebit/ecc/secp256k1.py#L159-L167"><code>Message signing</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1.py#L70-L76"><code>Signature verification</code></a></li>
           <li>Security of ECDSA signatures</li>
         </ul>
       </td>
