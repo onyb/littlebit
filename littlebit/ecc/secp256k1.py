@@ -1,6 +1,6 @@
-import hashlib
 import hmac
 from dataclasses import dataclass, field
+from hashlib import sha256
 from typing import cast
 
 from .field import FieldElement
@@ -89,6 +89,8 @@ class S256Point(Point):
             1. Start with the prefix byte.
                If y is even, it's 0x02; otherwise, it's 0x03
             2. Append the x coordinate in 32 bytes as a big-endian integer
+
+        All 256 bit integers are encoded in 32 bytes, big-endian.
         """
         if compressed:
             if self.y.number % 2 == 0:
@@ -172,6 +174,8 @@ class PrivateKey:
             Deterministic Usage of the Digital Signature Algorithm (DSA) and
             Elliptic Curve Digital Signature Algorithm (ECDSA)
 
+        All 256 bit integers are encoded in 32 bytes, big-endian.
+
         [TODO] - Explain me
         """
         k = b"\x00" * 32
@@ -180,15 +184,14 @@ class PrivateKey:
             z -= N
         z_bytes = z.to_bytes(32, "big")
         secret_bytes = self.secret.to_bytes(32, "big")
-        s256 = hashlib.sha256
-        k = hmac.new(k, v + b"\x00" + secret_bytes + z_bytes, s256).digest()
-        v = hmac.new(k, v, s256).digest()
-        k = hmac.new(k, v + b"\x01" + secret_bytes + z_bytes, s256).digest()
-        v = hmac.new(k, v, s256).digest()
+        k = hmac.new(k, v + b"\x00" + secret_bytes + z_bytes, sha256).digest()
+        v = hmac.new(k, v, sha256).digest()
+        k = hmac.new(k, v + b"\x01" + secret_bytes + z_bytes, sha256).digest()
+        v = hmac.new(k, v, sha256).digest()
         while True:
-            v = hmac.new(k, v, s256).digest()
+            v = hmac.new(k, v, sha256).digest()
             candidate = int.from_bytes(v, "big")
-            if candidate >= 1 and candidate < N:
+            if 1 <= candidate < N:
                 return candidate
-            k = hmac.new(k, v + b"\x00", s256).digest()
-            v = hmac.new(k, v, s256).digest()
+            k = hmac.new(k, v + b"\x00", sha256).digest()
+            v = hmac.new(k, v, sha256).digest()
