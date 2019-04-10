@@ -74,12 +74,12 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       </td>
     </tr>
     <tr>
-      <td><a href="littlebit/ecc/secp256k1.py"><code>secp256k1</code></a></td>
+      <td>secp256k1</td>
       <td align="center">:green_apple:</td>
       <td>
         <ul>
           <li><a href="https://en.bitcoin.it/wiki/Secp256k1">secp256k1 equation, and parameters</a></li>
-          <li><a href="littlebit/ecc/secp256k1.py#L19"><code>Point</code></a> and <a href="littlebit/ecc/secp256k1.py#L57"><code>FieldElement</code></a> definitions for secp256k1</li>
+          <li><a href="littlebit/ecc/secp256k1/point.py"><code>Point</code></a> and <a href="littlebit/ecc/secp256k1/field.py"><code>FieldElement</code></a> definitions for secp256k1</li>
         </ul>
       </td>
     </tr>
@@ -89,8 +89,8 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td>
         <ul>
           <li><a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA algorithm</a></li>
-          <li><a href="littlebit/ecc/secp256k1.py#L159-L167"><code>Message signing</code></a></li>
-          <li><a href="littlebit/ecc/secp256k1.py#L70-L76"><code>Signature verification</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1/private_key.py#L24-L32"><code>Message signing</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1/point.py#L22-L28"><code>Signature verification</code></a></li>
         </ul>
       </td>
     </tr>
@@ -104,21 +104,24 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td align="center">:green_apple:</td>
       <td>
         <ul>
-          <li><a href="littlebit/ecc/secp256k1.py#L78-L103"><code>Uncompressed and Compressed formats</code></a></li>
-          <li><a href="littlebit/ecc/secp256k1.py#L26-L45"><code>Square root of a S256FieldElement</code></a></li>
-          <li><a href="littlebit/ecc/secp256k1.py#L105-L134"><code>Deserialization</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1/point.py#L30-L57"><code>Uncompressed and Compressed formats</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1/field.py#L12-L31"><code>Square root of a S256FieldElement</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1/point.py#L59-L88"><code>Deserialization</code></a></li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>Distinguished Encoding Rules (DER) Signature format</td>
-      <td align="center">:lemon:</td>
+      <td align="center">:green_apple:</td>
       <td>
+        <ul>
+          <li><a href="littlebit/ecc/secp256k1/signature.py#L12-L51"><code>Serialization</code></a> and <a href="littlebit/ecc/secp256k1/signature.py#L53-L92"><code>Deserialization</code></a></li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>Base58 encoding</td>
-      <td align="center">:tomato:</td>
+      <td align="center">:lemon:</td>
       <td>
       </td>
     </tr>
