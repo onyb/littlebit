@@ -109,3 +109,22 @@ def test_sec():
         # Test deserialization from SEC format
         assert S256Point.parse(bytes.fromhex(uncompressed)) == point
         assert S256Point.parse(bytes.fromhex(compressed)) == point
+
+
+def test_der():
+    testcases = (
+        # r, s
+        (1, 2),
+        (randint(0, 2 ** 256), randint(0, 2 ** 255)),
+        (randint(0, 2 ** 256), randint(0, 2 ** 255)),
+        (
+            0x37206A0610995C58074999CB9767B87AF4C4978DB68C06E8E6E81D282047A7C6,
+            0x8CA63759C1157EBEAEC0D03CECCA119FC9A75BF8E6D0FA65C841C8E2738CDAEC,
+        ),
+    )
+    for r, s in testcases:
+        sig = Signature(r, s)
+        der = sig.der()
+        sig2 = Signature.parse(der)
+        assert sig2.r == r
+        assert sig2.s == s
