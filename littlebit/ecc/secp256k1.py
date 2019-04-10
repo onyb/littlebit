@@ -94,6 +94,47 @@ class Signature:
 
         return bytes([PREFIX, len(result)]) + result
 
+    @classmethod
+    def parse(cls, signature_bin: bytes) -> "Signature":
+        sig = signature_bin  # store a copy of the binary data
+
+        prefix = sig[0]
+        if prefix != 0x30:
+            raise ValueError("Invalid Signature prefix")
+        sig = sig[1:]  # remove the prifix byte
+
+        length = sig[0]
+        if len(signature_bin) != length + 2:
+            raise ValueError("Bad Signature length")
+        sig = sig[1:]  # remove the signature length byte
+
+        marker = sig[0]
+        if marker != 0x02:
+            raise ValueError("Bad Signature")
+        sig = sig[1:]  # remove the marker byte
+
+        rlen = sig[0]
+        sig = sig[1:]  # remove the rlen byte
+
+        r = int.from_bytes(sig[:rlen], byteorder="big")
+        sig = sig[rlen:]  # remove r
+
+        marker = sig[0]
+        if marker != 0x02:
+            raise ValueError("Bad Signature")
+        sig = sig[1:]  # remove the marker byte
+
+        slen = sig[0]
+        sig = sig[1:]  # remove the slen byte
+
+        s = int.from_bytes(sig[:slen], byteorder="big")
+        sig = sig[slen:]  # remove s
+
+        if sig:
+            raise ValueError("Signature too long")
+
+        return cls(r, s)
+
 
 class S256Point(Point):
     def __init__(self, x, y, a=None, b=None):
