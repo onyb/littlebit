@@ -10,7 +10,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
 **This software comes sans warranty. Do NOT use this code for anything other than educational purposes. I beg you.**
 
 
-### Progress report of features / concepts
+### Progress report of components
 
 > Legend: :green_apple: Done &nbsp; :lemon: In Progress &nbsp; :tomato: TODO
 
@@ -142,7 +142,8 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
 
 ### Contributing
 
-You can contribute to the project by:
+This is an educational project, with focus on comprehensiveness and readability. Any contribution that can further these goals is most welcome. You can help out by:
+
 - 🔬 Reading the codebase, and asking questions (please [create issues](https://github.com/onyb/littlebit/issues/new)).
 - 💯 Improving coverage of unit tests.
 - <b>λ</b> &nbsp; Adding (clever) type annotations.
