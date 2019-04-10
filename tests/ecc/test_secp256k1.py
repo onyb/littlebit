@@ -1,6 +1,8 @@
 from random import randint
 
-from littlebit.ecc.secp256k1 import G, N, PrivateKey, S256Point, Signature
+from littlebit.ecc.secp256k1 import Gx, Gy, N, PrivateKey, S256Point, Signature
+
+G = S256Point(x=Gx, y=Gy)
 
 
 def test_order():
