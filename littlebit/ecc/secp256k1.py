@@ -13,7 +13,7 @@ A: int = 0
 B: int = 7
 
 # Prime of the finite field
-P: int = 2 ** 256 - 2 ** 32 - 977
+P: int = 2 ** 256 - 2 ** 32 - 2 ** 9 - 2 ** 8 - 2 ** 7 - 2 ** 6 - 2 ** 4 - 1
 
 
 class S256FieldElement(FieldElement):
