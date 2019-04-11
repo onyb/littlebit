@@ -90,7 +90,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
         <ul>
           <li><a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA algorithm</a></li>
           <li><a href="littlebit/ecc/secp256k1/private_key.py#L24-L32"><code>Message signing</code></a></li>
-          <li><a href="littlebit/ecc/secp256k1/point.py#L22-L28"><code>Signature verification</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1/point.py#L23-L29"><code>Signature verification</code></a></li>
         </ul>
       </td>
     </tr>
@@ -104,9 +104,9 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td align="center">:green_apple:</td>
       <td>
         <ul>
-          <li><a href="littlebit/ecc/secp256k1/point.py#L30-L57"><code>Uncompressed and Compressed formats</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1/point.py#L31-L58"><code>Uncompressed and Compressed formats</code></a></li>
           <li><a href="littlebit/ecc/secp256k1/field.py#L12-L31"><code>Square root of a S256FieldElement</code></a></li>
-          <li><a href="littlebit/ecc/secp256k1/point.py#L59-L88"><code>Deserialization</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1/point.py#L60-L89"><code>Deserialization</code></a></li>
         </ul>
       </td>
     </tr>
@@ -124,22 +124,22 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td align="center">:green_apple:</td>
       <td>
         <ul>
-          <li><a href="littlebit/ecc/secp256k1/utils.py#L18-L41"><code>Encoder</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1/utils.py#L20-L43"><code>Encoder</code></a></li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>Bitcoin Address Format</td>
-      <td align="center">:lemon:</td>
+      <td align="center">:green_apple:</td>
       <td>
         <ul>
-          <li>S256Point encoder</li>
+          <li><a href="littlebit/ecc/secp256k1/point.py#L91-L94"><code>S256Point encoder</code></a></li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>Wallet Import Format (WIF)</td>
-      <td align="center">:tomato:</td>
+      <td align="center">:lemon:</td>
       <td>
         <ul>
           <li>Private key encoder</li>
