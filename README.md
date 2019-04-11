@@ -89,7 +89,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td>
         <ul>
           <li><a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA algorithm</a></li>
-          <li><a href="littlebit/ecc/secp256k1/private_key.py#L24-L32"><code>Message signing</code></a></li>
+          <li><a href="littlebit/ecc/secp256k1/private_key.py#L25-L33"><code>Message signing</code></a></li>
           <li><a href="littlebit/ecc/secp256k1/point.py#L23-L29"><code>Signature verification</code></a></li>
         </ul>
       </td>
@@ -139,10 +139,10 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
     </tr>
     <tr>
       <td>Wallet Import Format (WIF)</td>
-      <td align="center">:lemon:</td>
+      <td align="center">:green_apple:</td>
       <td>
         <ul>
-          <li>Private key encoder</li>
+          <li><a href="littlebit/ecc/secp256k1/private_key.py#L63-L68"><code>Private key encoder</code></a></li>
         </ul>
       </td>
     </tr>
