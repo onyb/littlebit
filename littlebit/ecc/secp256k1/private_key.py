@@ -5,6 +5,7 @@ from hashlib import sha256
 from .constants import Gx, Gy, N
 from .point import S256Point
 from .signature import Signature
+from .utils import encode_base58_checksum
 
 G = S256Point(x=Gx, y=Gy)
 
@@ -58,3 +59,10 @@ class PrivateKey:
                 return candidate
             k = hmac.new(k, v + b"\x00", sha256).digest()
             v = hmac.new(k, v, sha256).digest()
+
+    def wif(self, compressed: bool = True, testnet: bool = False) -> str:
+        secret_bytes = self.secret.to_bytes(32, "big")
+
+        prefix = b"\xef" if testnet else b"\x80"
+        suffix = b"\x01" if compressed else b""
+        return encode_base58_checksum(prefix + secret_bytes + suffix)
