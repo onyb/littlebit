@@ -4,6 +4,7 @@ from ..point import Point
 from .constants import A, B, Gx, Gy, N, P
 from .field import S256FieldElement
 from .signature import Signature
+from .utils import encode_base58_checksum, hash160
 
 
 class S256Point(Point):
@@ -86,6 +87,11 @@ class S256Point(Point):
                 return cls(x=x, y=S256FieldElement(P - y.number))
             else:
                 return cls(x=x, y=y)
+
+    def address(self, compressed: bool = True, testnet: bool = False) -> str:
+        h160 = hash160(self.sec(compressed))
+        prefix = b"\x6f" if testnet else b"\x00"
+        return encode_base58_checksum(prefix + h160)
 
 
 G = S256Point(x=Gx, y=Gy)
