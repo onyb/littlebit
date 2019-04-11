@@ -21,7 +21,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
     <tr>
       <th>Component</th>
       <th align="center">Status</th>
-      <th align="center">Concepts</th>
+      <th align="center">Implementations / Concepts</th>
     </tr>
     <tr>
       <td><b>Elliptic Curve Cryptography (ECC)</b></td>
@@ -121,20 +121,29 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
     </tr>
     <tr>
       <td>Base58 encoding</td>
-      <td align="center">:lemon:</td>
+      <td align="center">:green_apple:</td>
       <td>
+        <ul>
+          <li><a href="littlebit/ecc/secp256k1/utils.py#L18-L41"><code>Encoder</code></a></li>
+        </ul>
       </td>
     </tr>
     <tr>
-      <td>Address Format</td>
-      <td align="center">:tomato:</td>
+      <td>Bitcoin Address Format</td>
+      <td align="center">:lemon:</td>
       <td>
+        <ul>
+          <li>S256Point encoder</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>Wallet Import Format (WIF)</td>
       <td align="center">:tomato:</td>
       <td>
+        <ul>
+          <li>Private key encoder</li>
+        </ul>
       </td>
     </tr>
   </tbody>
