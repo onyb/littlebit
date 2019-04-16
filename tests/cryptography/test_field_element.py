@@ -1,6 +1,6 @@
 import pytest
 
-from littlebit.ecc import FieldElement
+from littlebit.cryptography import FieldElement
 
 
 def test_number_range():

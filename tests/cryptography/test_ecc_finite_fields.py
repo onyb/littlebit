@@ -1,6 +1,6 @@
 import pytest
 
-from littlebit.ecc import FieldElement, Point
+from littlebit.cryptography import FieldElement, Point
 
 
 def test_on_curve():
