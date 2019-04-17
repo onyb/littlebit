@@ -5,9 +5,9 @@
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python3.7-1f425f.svg)](https://www.python.org/)
 
 
-LittleBit is a product of my educational pursuit of learning how [Bitcoin](https://bitcoin.org/bitcoin.pdf) _really_ works at a very fundamental level. The objective of this exercise is to implement Bitcoin primitives with a **clean**, **readable**, and **heavily-commented** code, using nothing but the **Python standard library**.
+LittleBit is a product of my educational pursuit to understand how [Bitcoin](https://bitcoin.org/bitcoin.pdf) _really_ works at a very fundamental level. The objective of this exercise is to implement Bitcoin primitives with a **clean**, **readable**, and **heavily-commented** code, using nothing but the **Python standard library**.
 
-**This software comes sans warranty. Do NOT use this code for anything other than educational purposes. I beg you.**
+**DISCLAIMER:** This software comes **sans warranty**. Do **NOT** use this code for anything other than educational purposes. I beg you.
 
 
 ### Progress report of components
@@ -29,7 +29,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td></td>
     </tr>
     <tr>
-      <td><a href="littlebit/ecc/field.py"><code>Finite Fields</code></a></td>
+      <td><a href="littlebit/cryptography/field.py"><code>Finite Fields</code></a></td>
       <td align="center">:green_apple:</td>
       <td>
         <ul>
@@ -42,30 +42,30 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
           <li>
             Finite Field operations
             <ul>
-              <li><a href="littlebit/ecc/field.py#L19-L25"><code>Addition</code></li>
-              <li><a href="littlebit/ecc/field.py#L27-L33"><code>Subtraction</code></li>
-              <li><a href="littlebit/ecc/field.py#L35-L41"><code>Multiplication</code></li>
-              <li><a href="littlebit/ecc/field.py#L43-L67"><code>Exponentation</code></li>
-              <li><a href="littlebit/ecc/field.py#L69-L82"><code>Division</code></li>
-              <li><a href="littlebit/ecc/field.py#L84-L90"><code>Scalar Multiplication</code></li>
+              <li><a href="littlebit/cryptography/field.py#L19-L25"><code>Addition</code></a></li>
+              <li><a href="littlebit/cryptography/field.py#L27-L33"><code>Subtraction</code></a></li>
+              <li><a href="littlebit/cryptography/field.py#L35-L41"><code>Multiplication</code></a></li>
+              <li><a href="littlebit/cryptography/field.py#L43-L67"><code>Exponentation</code></a></li>
+              <li><a href="littlebit/cryptography/field.py#L69-L82"><code>Division</code></a></li>
+              <li><a href="littlebit/cryptography/field.py#L84-L90"><code>Scalar Multiplication</code></a></li>
             </ul>
           </li>
         </ul>
       </td>
     </tr>
     <tr>
-      <td><a href="littlebit/ecc/point.py"><code>Elliptic Curve</code></a></td>
+      <td><a href="littlebit/cryptography/point.py"><code>Elliptic Curve</code></a></td>
       <td align="center">:green_apple:</td>
       <td>
         <ul>
           <li>
-            <a href="littlebit/ecc/point.py#L22"><code>Elliptic curve equation</code></a>
+            <a href="littlebit/cryptography/point.py#L22"><code>Elliptic curve equation</code></a>
           </li>
           <li>
-            <a href="littlebit/ecc/point.py#L34-L104"><code>Point Addition over Finite Fields</code></a>
+            <a href="littlebit/cryptography/point.py#L34-L104"><code>Point Addition over Finite Fields</code></a>
           </li>
           <li>
-            <a href="littlebit/ecc/point.py#L106-L123"><code>Scalar Multiplication over Finite Fields</code></a>
+            <a href="littlebit/cryptography/point.py#L106-L123"><code>Scalar Multiplication over Finite Fields</code></a>
           </li>
           <li>
             Finite cyclic groups
@@ -79,7 +79,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td>
         <ul>
           <li><a href="https://en.bitcoin.it/wiki/Secp256k1">secp256k1 equation, and parameters</a></li>
-          <li><a href="littlebit/ecc/secp256k1/point.py"><code>Point</code></a> and <a href="littlebit/ecc/secp256k1/field.py"><code>FieldElement</code></a> definitions for secp256k1</li>
+          <li><a href="littlebit/cryptography/secp256k1/point.py"><code>Point</code></a> and <a href="littlebit/cryptography/secp256k1/field.py"><code>FieldElement</code></a> definitions for secp256k1</li>
         </ul>
       </td>
     </tr>
@@ -89,8 +89,8 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td>
         <ul>
           <li><a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA algorithm</a></li>
-          <li><a href="littlebit/ecc/secp256k1/private_key.py#L25-L33"><code>Message signing</code></a></li>
-          <li><a href="littlebit/ecc/secp256k1/point.py#L23-L29"><code>Signature verification</code></a></li>
+          <li><a href="littlebit/cryptography/secp256k1/private_key.py#L25-L33"><code>Message signing</code></a></li>
+          <li><a href="littlebit/cryptography/secp256k1/point.py#L23-L29"><code>Signature verification</code></a></li>
         </ul>
       </td>
     </tr>
@@ -104,9 +104,9 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td align="center">:green_apple:</td>
       <td>
         <ul>
-          <li><a href="littlebit/ecc/secp256k1/point.py#L31-L58"><code>Uncompressed and Compressed formats</code></a></li>
-          <li><a href="littlebit/ecc/secp256k1/field.py#L12-L31"><code>Square root of a S256FieldElement</code></a></li>
-          <li><a href="littlebit/ecc/secp256k1/point.py#L60-L89"><code>Deserialization</code></a></li>
+          <li><a href="littlebit/cryptography/secp256k1/point.py#L31-L58"><code>Uncompressed and Compressed formats</code></a></li>
+          <li><a href="littlebit/cryptography/secp256k1/field.py#L12-L31"><code>Square root of a S256FieldElement</code></a></li>
+          <li><a href="littlebit/cryptography/secp256k1/point.py#L60-L89"><code>Deserialization</code></a></li>
         </ul>
       </td>
     </tr>
@@ -115,7 +115,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td align="center">:green_apple:</td>
       <td>
         <ul>
-          <li><a href="littlebit/ecc/secp256k1/signature.py#L12-L51"><code>Serialization</code></a> and <a href="littlebit/ecc/secp256k1/signature.py#L53-L92"><code>Deserialization</code></a></li>
+          <li><a href="littlebit/cryptography/secp256k1/signature.py#L12-L51"><code>Serialization</code></a> and <a href="littlebit/cryptography/secp256k1/signature.py#L53-L92"><code>Deserialization</code></a></li>
         </ul>
       </td>
     </tr>
@@ -124,7 +124,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td align="center">:green_apple:</td>
       <td>
         <ul>
-          <li><a href="littlebit/ecc/secp256k1/utils.py#L20-L43"><code>Encoder</code></a></li>
+          <li><a href="littlebit/cryptography/utils.py#L20-L43"><code>Encoder</code></a></li>
         </ul>
       </td>
     </tr>
@@ -133,7 +133,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td align="center">:green_apple:</td>
       <td>
         <ul>
-          <li><a href="littlebit/ecc/secp256k1/point.py#L91-L94"><code>S256Point encoder</code></a></li>
+          <li><a href="littlebit/cryptography/secp256k1/point.py#L91-L94"><code>S256Point encoder</code></a></li>
         </ul>
       </td>
     </tr>
@@ -142,7 +142,7 @@ LittleBit is a product of my educational pursuit of learning how [Bitcoin](https
       <td align="center">:green_apple:</td>
       <td>
         <ul>
-          <li><a href="littlebit/ecc/secp256k1/private_key.py#L63-L68"><code>Private key encoder</code></a></li>
+          <li><a href="littlebit/cryptography/secp256k1/private_key.py#L63-L68"><code>Private key encoder</code></a></li>
         </ul>
       </td>
     </tr>
