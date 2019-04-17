@@ -123,21 +123,27 @@ LittleBit is a product of my educational pursuit to understand how [Bitcoin](htt
       <td>Base58 encoding</td>
       <td align="center">:green_apple:</td>
       <td>
-        <a href="littlebit/cryptography/utils.py#L20-L43"><code>Encoder</code></a>
+        <ul>
+          <li><a href="littlebit/cryptography/utils.py#L20-L43"><code>Encoder</code></a></li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>Bitcoin Address Format</td>
       <td align="center">:green_apple:</td>
       <td>
-          <a href="littlebit/cryptography/secp256k1/point.py#L91-L94"><code>S256Point encoder</code></a>
+        <ul>
+          <li><a href="littlebit/cryptography/secp256k1/point.py#L91-L94"><code>S256Point encoder</code></a></li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>Wallet Import Format (WIF)</td>
       <td align="center">:green_apple:</td>
       <td>
-          <a href="littlebit/cryptography/secp256k1/private_key.py#L63-L68"><code>Private key encoder</code></a>
+        <ul>
+          <li><a href="littlebit/cryptography/secp256k1/private_key.py#L63-L68"><code>Private key encoder</code></a></li>
+        </ul>
       </td>
     </tr>
     <tr>
