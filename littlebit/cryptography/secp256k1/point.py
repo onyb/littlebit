@@ -1,10 +1,10 @@
 from typing import cast
 
 from ..point import Point
+from ..utils import encode_base58_checksum, hash160
 from .constants import A, B, Gx, Gy, N, P
 from .field import S256FieldElement
 from .signature import Signature
-from .utils import encode_base58_checksum, hash160
 
 
 class S256Point(Point):

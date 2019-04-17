@@ -2,10 +2,10 @@ import hmac
 from dataclasses import dataclass, field
 from hashlib import sha256
 
+from ..utils import encode_base58_checksum
 from .constants import Gx, Gy, N
 from .point import S256Point
 from .signature import Signature
-from .utils import encode_base58_checksum
 
 G = S256Point(x=Gx, y=Gy)
 
