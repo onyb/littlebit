@@ -1,4 +1,4 @@
-from littlebit.cryptography.secp256k1.utils import encode_base58
+from littlebit.cryptography.utils import encode_base58
 
 
 def test_base58():
