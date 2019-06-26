@@ -56,11 +56,16 @@ class FieldElement:
         #
         # The above is equivalent to doing exp % p-1, which also ensures that the
         # result is positive. [TODO] - Explain me
+        #
+        # pow() in Python 3.8 can compute suitable power of the modular inverse.
+        # Refs:
+        #   - https://twitter.com/raymondh/status/1141290218407940097
+        #   - https://bugs.python.org/issue36027
 
         return self.__class__(
             number=pow(
                 self.number,
-                exponent % (self.prime - 1),  # handle negative exponents
+                exponent,
                 self.prime,
             ),
             prime=self.prime,
