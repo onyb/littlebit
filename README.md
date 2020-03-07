@@ -39,7 +39,7 @@ LittleBit is an educational library of [Bitcoin](https://bitcoin.org/bitcoin.pdf
       <td align="center">
         🐍 ➞ 🍏
         <br />
-        🦀 ➞ 🍋
+        🦀 ➞ 🍏
       </td>
     </tr>
     <tr>
