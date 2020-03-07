@@ -6,9 +6,6 @@ class S256FieldElement(FieldElement):
     def __init__(self, number, prime=None):
         super().__init__(number=number, prime=P)
 
-    def __repr__(self):
-        return f"{self.number:x}".zfill(64)
-
     def sqrt(self):
         ###############################################################################
         # Lemma 1: the prime p used in secp256k1 is such that p % 4 == 3              #

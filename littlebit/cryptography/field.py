@@ -6,6 +6,9 @@ class FieldElement:
     number: int
     prime: int
 
+    def __repr__(self):
+        return "0x" + f"{self.number:x}".zfill(64)
+
     def __post_init__(self):
         if not (0 <= self.number < self.prime):
             raise ValueError(f"{self.number} not in field range 0 to {self.prime - 1}.")
