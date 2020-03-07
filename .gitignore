@@ -146,3 +146,4 @@ dmypy.json
 
 # Custom
 .vscode
+.idea
