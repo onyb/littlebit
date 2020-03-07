@@ -6,7 +6,6 @@ construct_uint! {
     pub struct uint256(4);
 }
 
-// ? [FIXME] - Possible to use just Eq?
 #[derive(Eq, PartialEq, Debug)]
 pub struct FieldElement {
     pub number: uint256,
@@ -46,7 +45,7 @@ impl FieldElement {
 impl Add<FieldElement> for FieldElement {
     type Output = Result<Self, String>;
 
-    fn add(self, other: Self) -> Result<Self, String> {
+    fn add(self, other: Self) -> Self::Output {
         if self.prime != other.prime {
             Err(format!("Cannot add two elements in different fields"))
         } else {
@@ -58,7 +57,7 @@ impl Add<FieldElement> for FieldElement {
 impl Sub<FieldElement> for FieldElement {
     type Output = Result<Self, String>;
 
-    fn sub(self, other: Self) -> Result<Self, String> {
+    fn sub(self, other: Self) -> Self::Output {
         if self.prime != other.prime {
             Err(format!("Cannot subtract two elements in different fields"))
         } else {
@@ -75,7 +74,7 @@ impl Sub<FieldElement> for FieldElement {
 impl Mul<FieldElement> for FieldElement {
     type Output = Result<Self, String>;
 
-    fn mul(self, other: Self) -> Result<Self, String> {
+    fn mul(self, other: Self) -> Self::Output {
         if self.prime != other.prime {
             Err(format!("Cannot multiply two elements in different fields"))
         } else {
@@ -87,7 +86,7 @@ impl Mul<FieldElement> for FieldElement {
 impl Div<FieldElement> for FieldElement {
     type Output = Result<Self, String>;
 
-    fn div(self, other: Self) -> Result<Self, String> {
+    fn div(self, other: Self) -> Self::Output {
         if self.prime != other.prime {
             Err(format!("Cannot multiply two elements in different fields"))
         } else {
@@ -107,7 +106,7 @@ impl Div<FieldElement> for FieldElement {
 
 impl Mul<FieldElement> for i64 {
     type Output = Result<FieldElement, String>;
-    fn mul(self, element: FieldElement) -> Result<FieldElement, String> {
+    fn mul(self, element: FieldElement) -> Self::Output {
         match self >= 0 {
             true => FieldElement::new(
                 (element.number * uint256::from(self)) % element.prime,
