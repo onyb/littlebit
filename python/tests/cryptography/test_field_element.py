@@ -66,15 +66,13 @@ def test_pow():
     assert a ** 3 == FieldElement(15, 31)
 
     a = FieldElement(5, 31)
-    b = FieldElement(18, 31)
-    assert a ** 5 * b == FieldElement(16, 31)
+    assert a ** 5 == FieldElement(25, 31)
 
     a = FieldElement(17, 31)
     assert a ** -3 == FieldElement(29, 31)
 
     a = FieldElement(4, 31)
-    b = FieldElement(11, 31)
-    assert a ** -4 * b == FieldElement(13, 31)
+    assert a ** -4 == FieldElement(4, 31)
 
 
 def test_div():
