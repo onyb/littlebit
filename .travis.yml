@@ -1,14 +1,29 @@
-dist: xenial
-language: python
-python:
-  - "3.8"
+matrix:
+  include:
+    - language: python
+      dist: bionic
+      python:
+        - "3.8"
 
-install:
-  - pipenv install --dev
+      install:
+        - cd python
+        - pipenv install --dev
 
-script:
-  - pipenv run test --cov=./littlebit
+      script:
+        - pipenv run test --cov=./littlebit
 
-after_success:
-  - codecov
-  - mypy littlebit
+      after_success:
+        - codecov
+        - mypy littlebit
+
+    - language: rust
+      dist: bionic
+      rust:
+        - "1.41.1"
+
+      cache: cargo
+
+      script:
+        - cd rust
+        - cargo build --all
+        - cargo test --all
