@@ -11,9 +11,15 @@ pytest-cov = "*"
 codecov = "*"
 black = "*"
 pdbpp = "*"
+autoflake = "*"
+isort = "*"
 
 [requires]
 python_version = "3.8"
 
 [pipenv]
 allow_prereleases = true
+
+[scripts]
+test = "python -m pytest"
+lint = "./lint.sh"

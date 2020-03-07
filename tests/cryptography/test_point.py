@@ -1,6 +1,6 @@
 import pytest
 
-from littlebit.cryptography import Point
+from littlebit.cryptography.point import Point
 
 
 def test_ne():

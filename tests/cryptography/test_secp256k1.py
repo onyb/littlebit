@@ -1,6 +1,9 @@
 from random import randint
 
-from littlebit.cryptography.secp256k1 import Gx, Gy, N, PrivateKey, S256Point, Signature
+from littlebit.cryptography.secp256k1.constants import Gx, Gy, N
+from littlebit.cryptography.secp256k1.point import S256Point
+from littlebit.cryptography.secp256k1.private_key import PrivateKey
+from littlebit.cryptography.secp256k1.signature import Signature
 
 G = S256Point(x=Gx, y=Gy)
 

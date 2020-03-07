@@ -7,7 +7,7 @@ install:
   - pipenv install --dev
 
 script:
-  - pipenv run python -m pytest --cov=./littlebit
+  - pipenv run test --cov=./littlebit
 
 after_success:
   - codecov

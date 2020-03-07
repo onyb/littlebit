@@ -66,12 +66,7 @@ class FieldElement:
         #   - https://bugs.python.org/issue36027
 
         return self.__class__(
-            number=pow(
-                self.number,
-                exponent,
-                self.prime,
-            ),
-            prime=self.prime,
+            number=pow(self.number, exponent, self.prime,), prime=self.prime,
         )
 
     def __truediv__(self, other: "FieldElement") -> "FieldElement":
