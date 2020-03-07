@@ -84,3 +84,8 @@ def test_div():
     a = FieldElement(3, 31)
     b = FieldElement(24, 31)
     assert a / b == FieldElement(4, 31)
+
+
+def test_rmul():
+    assert 5 * FieldElement(number=18, prime=31) == FieldElement(number=28, prime=31)
+    assert -4 * FieldElement(number=11, prime=31) == FieldElement(number=18, prime=31)
