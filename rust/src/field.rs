@@ -14,7 +14,7 @@ pub struct FieldElement {
 
 impl FieldElement {
     pub fn new(number: uint256, prime: uint256) -> Result<Self, String> {
-        if number < uint256::from(0) || number > prime {
+        if number > prime {
             Err(format!(
                 "{el} not in field range 0 to {p}.",
                 el = number,
